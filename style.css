@@ -1,0 +1,29 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    scroll-snap-type: y mandatory; /* Smooth snap scrolling */
+    overflow-x: hidden;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 20px;
+}
+
+.green-bg { background-color: #8DA37E; color: white; }
+.cream-bg { background-color: #FDFBF7; color: #4A4A4A; }
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.content { max-width: 600px; }

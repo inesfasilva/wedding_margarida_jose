@@ -1,29 +1,52 @@
-body, html {
+:root {
+    --sage-green: #89a478; /* Sage from PDF */
+    --cream: #f9f4f2;
+    --dark-grey: #333;
+}
+
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    scroll-snap-type: y mandatory; /* Smooth snap scrolling */
-    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-grey);
+    line-height: 1.6;
 }
 
-.page {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
+section {
+    padding: 100px 10%;
     text-align: center;
-    padding: 20px;
+    min-height: 80vh;
 }
 
-.green-bg { background-color: #8DA37E; color: white; }
-.cream-bg { background-color: #FDFBF7; color: #4A4A4A; }
-
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 300;
-    letter-spacing: 2px;
+.hero {
+    background-color: var(--sage-green);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.content { max-width: 600px; }
+h1, h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+.green-section {
+    background-color: #e9ede6; /* Light green tint */
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--sage-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.timer {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: bold;
+}

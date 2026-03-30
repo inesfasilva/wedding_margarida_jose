@@ -1,52 +1,73 @@
 :root {
-    --sage-green: #89a478; /* Sage from PDF */
-    --cream: #f9f4f2;
-    --dark-grey: #333;
+    --sage: #8DA37E;
+    --cream: #FDFBF7;
+    --dark-text: #4A4A4A;
 }
 
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--cream);
-    color: var(--dark-grey);
-    line-height: 1.6;
+* { margin: 0; padding: 0; box-box: border-box; }
+
+body, html {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-text);
 }
 
-section {
-    padding: 100px 10%;
-    text-align: center;
-    min-height: 80vh;
-}
-
-.hero {
-    background-color: var(--sage-green);
-    color: white;
+.page {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
 }
 
-h1, h3 {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
+.sage-bg { background-color: var(--sage); color: white; }
+.cream-bg { background-color: var(--cream); }
+.white-bg { background-color: #ffffff; }
+
+.content { max-width: 700px; }
+
+h1.names {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
-.green-section {
-    background-color: #e9ede6; /* Light green tint */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    display: inline-block;
 }
 
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background-color: var(--sage-green);
+    background: var(--sage);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
     margin-top: 20px;
+    border-radius: 2px;
 }
 
-.timer {
-    font-size: 2rem;
-    margin: 20px 0;
-    font-weight: bold;
+.btn-outline {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    text-decoration: none;
 }
